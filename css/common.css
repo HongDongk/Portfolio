@@ -1,0 +1,64 @@
+:root[color-theme="blue"] {
+    --boxColor: #fff;
+}
+:root[color-theme="dark"] {
+    --boxColor: #2f2f2f;
+}
+.bold {
+    font-weight: bold;
+}
+.whiteFont {
+    color: #fff;
+}
+.whiteBackground {
+    background-color: var(--boxColor);
+}
+.fontsize2rem {
+    font-size: 2rem;
+}
+.fontsize5rem {
+    font-size: 5rem;
+}
+.fontsize7rem {
+    font-size: 7rem;
+}
+.fontsize8rem {
+    font-size: 8rem;
+}
+.fontsize10rem {
+    font-size: 10rem;
+}
+.fontsize15rem {
+    font-size: 15rem;
+}
+.line80 {
+    line-height: 80%;
+}
+.whiteboxWidth {
+    width: 20rem;
+    background-color: #fff;
+    border-radius: 1rem;
+}
+.whiteBox7rem {
+    height: 7rem;
+}
+.whiteBox13rem {
+    height: 13rem;
+}
+.whiteBox17rem {
+    height: 17rem;
+}
+.whiteBox20rem {
+    height: 20rem;
+}
+.centerTextBox10 {
+    padding-top: 1.5rem;
+    width: 100%;
+    height: 15rem;
+    text-align: center;
+}
+.subject {
+    padding-top: 2rem;
+    padding-left: 6rem;
+}
+  

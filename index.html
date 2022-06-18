@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오</title>
+    <link rel="stylesheet" href="./css/common.css"/>
+    <link rel="stylesheet" href="./css/portpolio.css"/>
+</head>
+<body>
+    <div>
+        <div id="blurheader"></div>
+        <section id="wrap">
+            <header><span id="darkMode" class="whiteFont">DARK</span></header>
+            <div id="smallCircle" class="whiteBackground"></div>
+            <div class="fontsize15rem whiteFont bold subject">Hi</div>
+            <div class="fontsize10rem whiteFont bold subject line80">
+                IM DONG <br/>
+                KEUN
+            </div>
+            <div id="bigCircle" class="whiteBackground"></div>
+        </section>
+        <section>
+            <div class="whiteFont fontsize5rem centerTextBox10 bold">DONGKEUN'S PORTPOLIO</div>
+            <div id="aboutme" class="fontsize2rem bold centerTextBox10 whiteBackground">ABOUT ME</div>
+            <div>
+                <p class="fontsize2rem whiteFont bold subject">SKILLS</p>
+                <div class="flexAlignStart">
+                  <div class="whiteboxWidth whiteBox17rem"></div>
+                  <div>
+                    <div class="whiteboxWidth whiteBox7rem"></div>
+                    <div class="whiteboxWidth whiteBox13rem"></div>
+                  </div>
+                  <div class="whiteboxWidth whiteBox13rem"></div>
+                  <div class="whiteboxWidth whiteBox20rem"></div>
+                </div>
+            </div>
+        </section>
+        <section class="flexCenter">
+            <div id="projectBox" class="whiteBackground flexCenter">PROJECT 01</div>
+        </section>
+        <section>
+            <div class="whiteFont fontsize5rem bold subject contact">ContactMe</div>
+        </section>
+    </div>
+    <script>
+        window.onscroll = function () {
+            if (document.body.scrollTop > 48 ||document.documentElement.scrollTop > 48) {
+                document.getElementById("blurheader").style.display = "block";
+            } else {
+                document.getElementById("blurheader").style.display = "none";
+            }
+        };
+  
+        document.documentElement.setAttribute("color-theme", "blue");
+        //최상위 root에 이 속성을 셋팅해준겁니다
+
+        let darkMode = document.getElementById("darkMode");
+  
+        darkMode.addEventListener("click", (event) => {
+          //e ===> 이벤트가 일어난 객체
+          //e.target ==> 이벤트가 일어난 객체를 선택
+          //e.target.innerText => 일어난 개체를 선택해서 innerText 속성을 선택
+  
+          if (event.target.innerText === "DARK") {
+            document.documentElement.setAttribute("color-theme", "dark");
+            event.target.innerText = "BLUE";
+          } else {
+            document.documentElement.setAttribute("color-theme", "blue");
+            event.target.innerText = "DARK";
+          }
+        });
+    </script>
+  
+    
+</body>
+</html>
