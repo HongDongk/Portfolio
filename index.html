@@ -45,6 +45,7 @@
         </section>
     </div>
     <script>
+        
         window.onscroll = function () {
             if (document.body.scrollTop > 48 ||document.documentElement.scrollTop > 48) {
                 document.getElementById("blurheader").style.display = "block";
@@ -54,22 +55,21 @@
         };
   
         document.documentElement.setAttribute("color-theme", "blue");
-        //최상위 root에 이 속성을 셋팅해준겁니다
-
+        
         let darkMode = document.getElementById("darkMode");
   
         darkMode.addEventListener("click", (event) => {
-          //e ===> 이벤트가 일어난 객체
-          //e.target ==> 이벤트가 일어난 객체를 선택
-          //e.target.innerText => 일어난 개체를 선택해서 innerText 속성을 선택
+            //e ===> 이벤트가 일어난 객체
+            //e.target ==> 이벤트가 일어난 객체를 선택
+            //e.target.innerText => 일어난 개체를 선택해서 innerText 속성을 선택
   
-          if (event.target.innerText === "DARK") {
-            document.documentElement.setAttribute("color-theme", "dark");
-            event.target.innerText = "BLUE";
-          } else {
-            document.documentElement.setAttribute("color-theme", "blue");
-            event.target.innerText = "DARK";
-          }
+            if (event.target.innerText === "DARK") {
+                document.documentElement.setAttribute("color-theme", "dark");
+                event.target.innerText = "BLUE";
+            } else {
+                document.documentElement.setAttribute("color-theme", "blue");
+                event.target.innerText = "DARK";
+            }
         });
     </script>
   
