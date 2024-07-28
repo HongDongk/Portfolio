@@ -17,7 +17,7 @@ export default function NavigationBar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 400) {
+      if (window.scrollY > 300) {
         setScrolled(true);
       } else {
         setScrolled(false);
@@ -64,6 +64,7 @@ export default function NavigationBar() {
 }
 
 const Content = styled.div<HeaderProps>`
+  z-index: 100;
   position: fixed;
   width: 100%;
   height: 80px;

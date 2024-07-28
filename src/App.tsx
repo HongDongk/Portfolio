@@ -4,6 +4,7 @@ import { Outlet } from 'react-router';
 
 const GlobalStyle = createGlobalStyle`
   body {
+    font-family: "Noto Sans KR", sans-serif;
     overflow-x: hidden; /* 수평 스크롤 제거 */
   }
 `;

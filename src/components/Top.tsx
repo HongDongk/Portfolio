@@ -14,8 +14,8 @@ export default function Top() {
     <Content>
       <NavigationBar />
       <Middle>
-        <p>FrontEnd Developer 홍동근</p>
-        <SubTitle>안녕하세요, 도전하는 개발자 홍동근입니다</SubTitle>
+        <p>FrontEnd Developer Portfolio</p>
+        <SubTitle>홍동근</SubTitle>
       </Middle>
       <Bottom>
         <BottomButton onClick={scrollToPosition}>
@@ -38,19 +38,18 @@ const Content = styled.div`
 const Middle = styled.div`
   font-family: 'Black Han Sans', sans-serif;
   width: 100vw;
-  height: 150px;
-  padding-top: 200px;
+  height: 200px;
+  padding-top: 190px;
   text-align: center;
   color: white;
-  font-size: 45px;
+  font-size: 40px;
   // border: 1px solid red;
 `;
 
 const SubTitle = styled.p`
-  font-family: sans-serif;
-  margin-top: 30px;
-  font-weight: 700;
-  font-size: 20px;
+  margin-top: 20px;
+  font-size: 45px;
+  letter-spacing: 8px;
 `;
 
 const Bottom = styled.div`
@@ -60,10 +59,10 @@ const Bottom = styled.div`
 `;
 
 const BottomButton = styled.div`
-  width: 162px;
-  height: 56px;
+  width: 140px;
+  height: 50px;
   text-align: center;
-  line-height: 56px;
+  line-height: 50px;
   border: none;
   border-radius: 50px;
   background-color: #f4623a;
@@ -72,4 +71,7 @@ const BottomButton = styled.div`
   text-decoration: none;
   color: #fff;
   cursor: pointer;
+  &:hover {
+    background-color: #b22222;
+  }
 `;
