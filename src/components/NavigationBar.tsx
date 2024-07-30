@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 interface HeaderProps {
-  scrolled: boolean;
+  scrolled: string;
 }
 
 export default function NavigationBar() {
-  const [scrolled, setScrolled] = useState<boolean>(false);
+  const [scrolled, setScrolled] = useState<string>('false');
   const listData = [
     { id: 1, text: 'Introduce', targetId: 'Introduce' },
     { id: 2, text: 'Projects', targetId: 'Projects' },
@@ -18,9 +18,9 @@ export default function NavigationBar() {
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 300) {
-        setScrolled(true);
+        setScrolled('true');
       } else {
-        setScrolled(false);
+        setScrolled('false');
       }
     };
 
@@ -72,13 +72,14 @@ const Content = styled.div<HeaderProps>`
   align-items: center;
   justify-content: space-around;
   box-shadow: ${(props) =>
-    props.scrolled ? '0 1px .3rem hsla(0, 0%, 80%, .8)' : ''};
-  background-color: ${(props) => (props.scrolled ? 'white' : '')};
+    props.scrolled === 'true' ? '0 1px .3rem hsla(0, 0%, 80%, .8)' : ''};
+  background-color: ${(props) => (props.scrolled === 'true' ? 'white' : '')};
 `;
 
 const Left = styled.div<HeaderProps>`
   min-width: 375px;
-  color: ${(props) => (props.scrolled ? 'black' : 'hsla(0, 0%, 100%, 0.7)')};
+  color: ${(props) =>
+    props.scrolled === 'true' ? 'black' : 'hsla(0, 0%, 100%, 0.7)'};
   text-decoration: none;
   font-weight: 700;
   font-size: 30px;
