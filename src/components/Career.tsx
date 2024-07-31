@@ -11,16 +11,17 @@ export default function Career() {
 
 const Content = styled.div`
   width: 100vw;
-  height: 300px;
   padding-top: 60px;
-  // background-color: #e0e0e0;
+  padding-bottom: 100px;
+  background-color: #f5f5f5;
 `;
 
 const Title = styled.p`
   width: 100%;
   text-align: center;
   font-family: 'Black Han Sans', sans-serif;
-  font-size: 45px;
+  font-size: 60px;
+  color: black;
 `;
 
 const Info = styled.p`

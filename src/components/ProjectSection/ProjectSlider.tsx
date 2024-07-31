@@ -40,11 +40,12 @@ const SSlider = styled(Slider)`
   .slick-dots li.slick-active button:before {
     color: #1e90ff;
   }
-  width: 350px;
-  /* border: 1px solid red; */
+  width: 370px;
 `;
 
 const Img = styled.img`
   width: 100%;
   height: 440px;
+  object-fit: cover;
+  object-position: top;
 `;
