@@ -2,9 +2,8 @@ import styled from 'styled-components';
 import Top from '../components/Top';
 import Introduce from '../components/Introduce';
 import Projects from '../components/ProjectSection/Projects';
-import Career from '../components/Career';
-import Experience from '../components/Experience';
-import Skills from '../components/Skills';
+import Career from '../components/CareerSection/Career';
+import Skills from '../components/SkillSection/Skills';
 
 function Mainpage() {
   return (
@@ -18,9 +17,6 @@ function Mainpage() {
       </div>
       <div id="Career">
         <Career />
-      </div>
-      <div id="Experience">
-        <Experience />
       </div>
       <div id="Skills">
         <Skills />

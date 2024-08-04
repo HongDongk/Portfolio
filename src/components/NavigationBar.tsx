@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 interface HeaderProps {
@@ -11,8 +11,7 @@ export default function NavigationBar() {
     { id: 1, text: 'Introduce', targetId: 'Introduce' },
     { id: 2, text: 'Projects', targetId: 'Projects' },
     { id: 3, text: 'Career', targetId: 'Career' },
-    { id: 4, text: 'Experience', targetId: 'Experience' },
-    { id: 5, text: 'Skills', targetId: 'Skills' },
+    { id: 4, text: 'Skills', targetId: 'Skills' },
   ];
 
   useEffect(() => {
@@ -77,7 +76,7 @@ const Content = styled.div<HeaderProps>`
 `;
 
 const Left = styled.div<HeaderProps>`
-  min-width: 375px;
+  min-width: 470px;
   color: ${(props) =>
     props.scrolled === 'true' ? 'black' : 'hsla(0, 0%, 100%, 0.7)'};
   text-decoration: none;
@@ -89,8 +88,8 @@ const Left = styled.div<HeaderProps>`
 `;
 
 const Right = styled.ul`
-  width: 30%;
-  min-width: 529px;
+  width: 25%;
+  min-width: 450px;
   display: flex;
   justify-content: space-between;
   text-decoration: none;
@@ -100,6 +99,7 @@ const Right = styled.ul`
   li {
     &:hover {
       cursor: pointer;
+      color: #ff8c00;
     }
   }
 `;
