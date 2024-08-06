@@ -36,20 +36,20 @@ const Content = styled.div`
 `;
 
 const Middle = styled.div`
-  font-family: 'Black Han Sans', sans-serif;
+  font-family: 'Karla', sans-serif;
+  font-weight: 800;
   width: 100vw;
   height: 200px;
   padding-top: 190px;
   text-align: center;
   color: white;
-  font-size: 40px;
-  // border: 1px solid red;
+  font-size: 45px;
 `;
 
 const SubTitle = styled.p`
   margin-top: 20px;
-  font-size: 45px;
-  letter-spacing: 8px;
+  font-size: 33px;
+  letter-spacing: 5px;
 `;
 
 const Bottom = styled.div`
