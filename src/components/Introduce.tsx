@@ -12,7 +12,7 @@ export default function Introduce() {
     <Content>
       <Title>Introduce</Title>
       <Info>
-        <Big>🍀안녕하세요, 도전하는 개발자 홍동근입니다🍀</Big>
+        <Big>🍀안녕하세요, FE 개발자 홍동근입니다🍀</Big>
         <br />
         <Small>
           개발자로써 문제를 해결하는 것과 새로운 기술에 도전하는 것을 좋아하며,
