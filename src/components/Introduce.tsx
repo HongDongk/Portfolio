@@ -6,6 +6,7 @@ import calendar from '../assets/calendar-fill.svg';
 import telephone from '../assets/telephone-fill.svg';
 import github from '../assets/github.webp';
 import velog from '../assets/velog.png';
+import media from '../styles/media';
 
 export default function Introduce() {
   return (
@@ -108,6 +109,9 @@ const Info = styled.div`
   margin-top: 50px;
   width: 100%;
   text-align: center;
+  ${media.small`
+    display: none;
+  `};
 `;
 
 const Big = styled.p`
@@ -121,6 +125,9 @@ const Small = styled.p`
   width: 100%;
   text-align: center;
   font-size: 15px;
+  ${media.medium`
+    font-size: 13px;
+  `};
 `;
 
 const InfoBox = styled.div`
@@ -128,14 +135,27 @@ const InfoBox = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
+  ${media.medium`
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  `};
 `;
 
 const InfoLine = styled.div`
   display: flex;
   justify-content: center;
   width: 320px;
-  min-width: 280px;
   height: 80px;
+  ${media.medium`
+    display:flex;
+    justify-content: start;
+    width: 250px;
+    margin-top:5px;
+    border-bottom : 0.5px solid gray;
+  `};
 `;
 
 const InfoImg = styled.img`

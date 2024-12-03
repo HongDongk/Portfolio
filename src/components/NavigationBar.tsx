@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import media from '../styles/media';
 import MenuItem from '@mui/material/MenuItem';
-import Select, { SelectChangeEvent } from '@mui/material/Select';
+import Select from '@mui/material/Select';
 import MenuIcon from '@mui/icons-material/Menu';
 
 interface HeaderProps {
@@ -69,13 +69,18 @@ export default function NavigationBar() {
             IconComponent={(props) => (
               <MenuIcon {...props} sx={{ fontSize: '2.5rem' }} />
             )}
-            label="Menu"
             MenuProps={{
               disableScrollLock: true, // 스크롤 락 비활성화 제거
             }}
           >
             {listData.map((list) => (
               <MenuItem
+                selected
+                sx={{
+                  '&.Mui-selected': {
+                    backgroundColor: 'white',
+                  },
+                }}
                 key={list.id}
                 onClick={() => scrollToPosition(list.targetId)}
               >
@@ -160,7 +165,8 @@ const StyledSelect = styled(Select)`
   display: flex;
   justify-content: center;
   margin-left: auto;
-  input:focus {
-    outline: none;
-  }
+`;
+
+const StyledMenuItem = styled(MenuItem)`
+  color: red;
 `;

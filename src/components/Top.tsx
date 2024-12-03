@@ -2,6 +2,7 @@ import styled, { keyframes } from 'styled-components';
 import top from '../assets/top.jpg';
 import NavigationBar from './NavigationBar';
 import React, { useState, useEffect } from 'react';
+import media from '../styles/media';
 
 interface BackgroundProps {
   opacity: number;
@@ -68,6 +69,9 @@ const Middle = styled.div`
   text-align: center;
   color: white;
   font-size: 45px;
+  ${media.medium`
+    font-size: 35px;
+  `};
 `;
 
 const SubTitle = styled.p`
