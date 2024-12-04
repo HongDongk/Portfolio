@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import ProjectBox from './ProjectBox';
+import media from '../../styles/media';
 
 export default function Projects() {
   return (
@@ -31,7 +32,9 @@ const Title = styled.p`
 `;
 
 const ProjectList = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 `;

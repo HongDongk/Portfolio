@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import TechStackBox from './TechStackBox';
 import ProjectSlider from './ProjectSlider';
+import media from '../../styles/media';
 
 interface ProjectBoxProps {
   title: string;
@@ -149,6 +150,11 @@ const Content = styled.div`
   padding: 40px;
   border-radius: 20px;
   background-color: white;
+  ${media.medium`
+    // width: 200px;
+    min-width: 280px;
+    padding: 25px;
+  `};
 `;
 
 const Title = styled.p`
@@ -181,7 +187,9 @@ const Slider = styled.div`
   min-width: 500px;
   display: flex;
   justify-content: center;
-  // border: 1px solid blue;
+  ${media.medium`
+    display: none;
+  `};
 `;
 
 const Intro = styled.div`

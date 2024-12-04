@@ -197,6 +197,11 @@ const Box = styled.div`
   width: 850px;
   min-width: 850px;
   height: 500px;
+  ${media.medium`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  `};
 `;
 
 const LinkBox = styled.a`
@@ -228,6 +233,14 @@ const LinkBox = styled.a`
     margin-top: 50px;
     font-size: 14px;
   }
+  ${media.medium`
+    margin-top: 40px;
+    width: 250px;
+    height: 100px;
+    ul {
+      display: none;
+    }
+  `};
 `;
 
 const Link = styled.div`

@@ -77,6 +77,7 @@ export default function NavigationBar() {
               <MenuItem
                 selected
                 sx={{
+                  color: '#f5b041',
                   '&.Mui-selected': {
                     backgroundColor: 'white',
                   },
@@ -165,8 +166,4 @@ const StyledSelect = styled(Select)`
   display: flex;
   justify-content: center;
   margin-left: auto;
-`;
-
-const StyledMenuItem = styled(MenuItem)`
-  color: red;
 `;
