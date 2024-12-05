@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import media from '../../styles/media';
 
 interface TechStackBoxProps {
   stack: string;
@@ -16,4 +17,7 @@ const Content = styled.div`
   padding: 4px;
   border: 1px solid gray;
   font-size: 13px;
+  ${media.medium`
+    margin-top: 3px;
+  `};
 `;

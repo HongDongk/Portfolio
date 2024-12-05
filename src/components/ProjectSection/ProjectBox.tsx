@@ -20,7 +20,7 @@ interface ProjectData {
 const projectData = [
   {
     title: '미팅학개론',
-    info: '2022.12 ~ 2023.03 (개발자 3人 팀 프로젝트)',
+    info: '2022.12 ~ 2023.03 (개발 3인, 기획 3인 팀 프로젝트)',
     imgsrc: [
       '../../images/meeting1.png',
       '../../images/meeting2.png',
@@ -36,7 +36,7 @@ const projectData = [
   },
   {
     title: '코인뷰어',
-    info: '2022.09 ~ 2022.10 (1人 개인 프로젝트)',
+    info: '2022.09 ~ 2022.10 (1인 개인 프로젝트)',
     imgsrc: [
       '../../images/coin3.png',
       '../../images/coin1.png',
@@ -50,7 +50,7 @@ const projectData = [
   },
   {
     title: '포트폴리오 사이트',
-    info: '2024.07 ~ 2024.08 (1人 개인 프로젝트)',
+    info: '2024.07 ~ 2024.08 (1인 개인 프로젝트)',
     imgsrc: [
       '../../images/portfolio1.png',
       '../../images/portfolio2.png',
@@ -151,7 +151,6 @@ const Content = styled.div`
   border-radius: 20px;
   background-color: white;
   ${media.medium`
-    // width: 200px;
     min-width: 280px;
     padding: 25px;
   `};
@@ -162,6 +161,9 @@ const Title = styled.p`
   text-align: center;
   font-size: 30px;
   font-weight: bold;
+  ${media.small`
+    font-size: 20px;
+  `};
 `;
 
 const Info = styled.p`
@@ -171,6 +173,9 @@ const Info = styled.p`
   font-size: 14px;
   color: #6c757d;
   font-weight: bold;
+  ${media.small`
+    font-size: 12px;
+  `};
 `;
 
 const DetailBox = styled.div`
@@ -179,7 +184,9 @@ const DetailBox = styled.div`
   height: 440px;
   display: flex;
   justify-content: space-between;
-  // border: 1px solid red;
+  ${media.small`
+    margin-top: 20px;
+  `};
 `;
 
 const Slider = styled.div`
@@ -208,6 +215,10 @@ const IntroDetatil = styled.div`
   width: 100%;
   font-size: 14px;
   line-height: 1.7;
+  ${media.small`
+    font-size: 11.5px;
+    margin-top: 15px;
+  `};
 `;
 
 const IntroDetatilBold = styled.span`
@@ -226,12 +237,19 @@ const IntroBottom = styled.div`
     min-width: 100%;
     margin-top: 20px;
   }
+  ${media.medium`
+    font-size: 12.5px;
+  `};
 `;
 
 const BottomTitle = styled.span`
   display: inline-block;
   width: 100px;
   min-width: 100px;
+  ${media.medium`
+    width: 50px;
+    min-width: 50px;
+  `};
 `;
 
 const BottomLi = styled.span`
@@ -243,4 +261,14 @@ const BottomLi = styled.span`
     text-decoration: none;
     color: #1e90ff;
   }
+  ${media.medium`
+    margin-left: 25px;
+    a {
+      font-size: 11px;
+      font-weight: bold;
+    }
+  `};
+  ${media.small`
+    margin-left: 17px;
+  `};
 `;
