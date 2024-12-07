@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import media from '../../styles/media';
 
 interface CareerBoxProps {
   company: string;
@@ -20,21 +21,21 @@ interface CompanyData {
 const companyData = [
   {
     name: '(주) 온품',
-    info: '2024.04 -',
+    info: '2024.04 - 2024.12',
     imgsrc: '../../images/onpoom.png',
     companyInfo:
       '(주) 온품은 <b>3D 시뮬레이션 기반의 디지털 트윈 서비스</b>를 제공하는 회사입니다. 웹 상에서 실시간 3D 환경을 구축하여 사고 예방, 비용 절감 및 운영 효율성 향상을 돕는 혁신적인 솔루션을 제공하고있습니다. /n 기본적으로 프런트엔드 포지션으로 <b>3D 기능 고도화, 전체 서비스의 신규 개발 및 유지보수</b>을 담당하고 있습니다.',
     taskInfo: [
       {
         taskTitle: '디지털트윈 웹 솔루션 기능 개발',
-        taskDuration: '2024.07 - ',
+        taskDuration: '2024.07 - 2024.12',
         taskDetail: [
           'React의 Cesium라이브러리를 사용하여 3D환경을 구축하고 신규 시뮬레이션 기능 개발',
         ],
       },
       {
         taskTitle: '마이크로프런트엔드 아키텍쳐 도입',
-        taskDuration: '2024.04 - ',
+        taskDuration: '2024.04 - 2024.09',
         taskDetail: [
           '기존의 솔루션 코드는 UmiJs, Dva 등 외국 라이브러리 사용과 수백개의 기능들이 모노레포 형식으로 묶여있어 유지보수에 한계가 있었음 ',
           '마이크로프런트엔드 전환 작업을 담당하여 각 서브앱에서 기존 라이브러리를 독립적으로 교체 및 전체 서비스 기능별 분리',
@@ -93,7 +94,7 @@ export default function CareerBox({ company }: CareerBoxProps) {
     <Content>
       <LeftBox>
         <CompanyIcon>
-          <img src={data.imgsrc} alt={data.imgsrc} width="190" />
+          <img src={data.imgsrc} alt={data.imgsrc} />
         </CompanyIcon>
       </LeftBox>
       <RightBox>
@@ -139,12 +140,23 @@ const Content = styled.div`
   width: 65%;
   display: flex;
   margin-top: 80px;
+  ${media.medium`
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+  `};
 `;
 
 const LeftBox = styled.div`
   width: 28%;
   min-width: 300px;
   border-right: 2px solid #ccc;
+  ${media.medium`
+    width: 100%;
+    border: none;
+    display: flex;
+    justify-content: center;
+  `};
 `;
 
 const CompanyIcon = styled.div`
@@ -156,11 +168,30 @@ const CompanyIcon = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  img {
+    width: 190px;
+  }
+  ${media.medium`
+    width: 190px;
+    height: 190px;
+    img {
+      width: 140px;
+    }
+  `};
 `;
 
 const RightBox = styled.div`
   width: 70%;
   padding-left: 40px;
+  ${media.medium`
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+  `};
 `;
 
 const Name = styled.div`
@@ -168,6 +199,10 @@ const Name = styled.div`
   color: #000000;
   font-size: 25px;
   font-weight: bold;
+  ${media.medium`
+    margin-top:10px;
+    font-size: 20px;
+  `};
 `;
 
 const Date = styled.div`
@@ -175,6 +210,9 @@ const Date = styled.div`
   width: 100%;
   color: #6c757d;
   font-size: 17px;
+  ${media.medium`
+    font-size: 14px;
+  `};
 `;
 
 const CompanyInfo = styled.div`
@@ -182,6 +220,10 @@ const CompanyInfo = styled.div`
   width: 100%;
   border-bottom: 1.5px solid #ccc;
   padding-bottom: 15px;
+  ${media.medium`
+    font-size: 13px;
+    text-align:start;
+  `};
 `;
 
 const CompanyInfoDetatil = styled.div`
@@ -189,6 +231,9 @@ const CompanyInfoDetatil = styled.div`
   width: 100%;
   font-size: 16px;
   line-height: 1.5;
+  ${media.medium`
+    font-size: 13px;
+  `};
 `;
 
 const CompanyInfoDetatilBold = styled.span`
@@ -199,6 +244,9 @@ const TaskInfo = styled.div`
   margin-top: 20px;
   margin-bottom: 50px;
   width: 100%;
+  ${media.medium`
+    margin-bottom: 20px;
+  `};
 `;
 
 const TaskTitle = styled.div`
@@ -209,6 +257,10 @@ const TaskTitle = styled.div`
   padding-left: 14px;
   font-weight: bold;
   font-size: 17px;
+  ${media.medium`
+    text-align:start;
+    font-size: 15px;
+  `};
 `;
 
 const TaskDuration = styled.div`
@@ -216,6 +268,10 @@ const TaskDuration = styled.div`
   width: 100%;
   color: #6c757d;
   font-size: 15px;
+  ${media.medium`
+    text-align:start;
+    font-size: 13px;
+  `};
 `;
 
 const TaskDetail = styled.ul`
@@ -224,9 +280,17 @@ const TaskDetail = styled.ul`
   width: 100%;
   font-size: 15px;
   list-style-type: disc;
+  ${media.medium`
+    margin-top: 10px;
+    text-align:start;
+    font-size: 11px;
+  `};
 `;
 
 const Detail = styled.li`
   margin-top: 12px;
   line-height: 1.6;
+  ${media.medium`
+    margin-top: 10px;
+  `};
 `;
