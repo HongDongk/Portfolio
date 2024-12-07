@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import SkillBox from './SkillBox';
+import media from '../../styles/media';
 
 export default function Skills() {
   return (
@@ -42,10 +43,15 @@ const Title = styled.p`
 const SkillContatiner = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-top: 80px;
+  margin-top: 45px;
   width: 68%;
   min-width: 1200px;
-  height: 760px;
+  ${media.medium`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 0px;
+  `};
 `;
 
 const SkillLine = styled.div`

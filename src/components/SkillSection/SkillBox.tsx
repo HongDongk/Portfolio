@@ -112,6 +112,7 @@ export default function SkillBox({ title }: SkillBoxProps) {
 }
 
 const Content = styled.div`
+  margin-top: 15px;
   width: 17rem;
   box-shadow: 2px 2px 2px grey;
   border-radius: 1rem;
