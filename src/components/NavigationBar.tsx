@@ -104,7 +104,7 @@ export default function NavigationBar() {
 const Content = styled.div<HeaderProps>`
   z-index: 100;
   position: fixed;
-  width: 100%;
+  width: 100vw;
   height: 80px;
   display: flex;
   align-items: center;
