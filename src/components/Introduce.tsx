@@ -183,6 +183,7 @@ const InfoText = styled.div`
 const InfoBox2 = styled.div`
   margin-top: 80px;
   width: 100%;
+  max-width: 100%;
   height: 510px;
   display: flex;
   justify-content: center;
@@ -252,6 +253,9 @@ const Link = styled.div`
     font-weight: bold;
     text-decoration: none;
   }
+  ${media.medium`
+    width: 250px;
+  `};
 `;
 
 const Img = styled.img`
