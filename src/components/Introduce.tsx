@@ -195,7 +195,6 @@ const Box = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 850px;
-  min-width: 850px;
   height: 500px;
   ${media.medium`
     display: flex;
