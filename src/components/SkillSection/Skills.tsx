@@ -41,12 +41,12 @@ const Title = styled.p`
 `;
 
 const SkillContatiner = styled.div`
-  // border: 1px solid red;
   display: flex;
   justify-content: space-between;
   margin-top: 45px;
-  width: 73%;
-  @media only screen and (max-width: 1450px) {
+  width: 68%;
+  max-width: 1200px;
+  @media only screen and (max-width: 1580px) {
     display: flex;
     flex-direction: column;
     align-items: center;
