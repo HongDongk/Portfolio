@@ -149,6 +149,7 @@ const Content = styled.div`
 
 const LeftBox = styled.div`
   width: 28%;
+  min-width: 300px;
   border-right: 2px solid #ccc;
   ${media.medium`
     width: 100%;

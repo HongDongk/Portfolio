@@ -41,17 +41,16 @@ const Title = styled.p`
 `;
 
 const SkillContatiner = styled.div`
+  // border: 1px solid red;
   display: flex;
   justify-content: space-between;
   margin-top: 45px;
-  width: 68%;
-  min-width: 1200px;
-  ${media.medium`
+  width: 73%;
+  @media only screen and (max-width: 1450px) {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 0px;
-  `};
+  }
 `;
 
 const SkillLine = styled.div`
