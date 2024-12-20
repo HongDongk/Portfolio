@@ -157,6 +157,9 @@ const LeftBox = styled.div`
     display: flex;
     justify-content: center;
   `};
+  ${media.small`
+    min-width: 0;
+  `};
 `;
 
 const CompanyIcon = styled.div`
@@ -200,7 +203,7 @@ const Name = styled.div`
   font-size: 25px;
   font-weight: bold;
   ${media.medium`
-    margin-top:10px;
+    margin-top:15px;
     font-size: 20px;
   `};
 `;
