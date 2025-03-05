@@ -20,6 +20,13 @@ interface CompanyData {
 
 const companyData = [
   {
+    name: '카카오테크부트캠프',
+    info: '2025.02 ~ 2025.08',
+    imgsrc: '../../images/kakaotech.webp',
+    companyInfo: '<b>카카오테크 부트캠프 풀스택 과정</b> 진행중',
+    taskInfo: [],
+  },
+  {
     name: '(주) 온품',
     info: '2024.04 - 2024.12',
     imgsrc: '../../images/onpoom.png',
@@ -74,14 +81,17 @@ export default function CareerBox({ company }: CareerBoxProps) {
 
   useEffect(() => {
     switch (company) {
-      case '온품':
+      case '카카오테크부트캠프':
         setData(companyData[0]);
         break;
-      case '윈스':
+      case '온품':
         setData(companyData[1]);
         break;
-      case '한국외국어대학교':
+      case '윈스':
         setData(companyData[2]);
+        break;
+      case '한국외국어대학교':
+        setData(companyData[3]);
         break;
       default:
         setData(null);

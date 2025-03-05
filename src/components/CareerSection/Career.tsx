@@ -5,6 +5,7 @@ export default function Career() {
   return (
     <Content>
       <Title>Career</Title>
+      <CareerBox company={'카카오테크부트캠프'} />
       <CareerBox company={'온품'} />
       <CareerBox company={'윈스'} />
       <CareerBox company={'한국외국어대학교'} />
